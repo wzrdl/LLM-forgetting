@@ -26,7 +26,7 @@ def parse_arguments():
 	parser.add_argument('--gamma', default=0.4, type=float, help='learning rate decay. Use 1.0 for no decay')
 	parser.add_argument('--dropout', default=0.25, type=float, help='dropout probability. Use 0.0 for no dropout')
 	parser.add_argument('--hiddens', default=256, type=int, help='num of hidden neurons in each layer of a 2-layer MLP')
-	parser.add_argument('--compute-eigenspectrum', default=False, type=bool, help='compute eigenvalues/eigenvectors?')
+	parser.add_argument('--compute-eigenspectrum', action='store_true', help='compute eigenvalues/eigenvectors?')
 	parser.add_argument('--seed', default=1234, type=int, help='random seed')
 
 	args = parser.parse_args()
@@ -116,7 +116,7 @@ def log_hessian(model, loader, time, task_id, hessian_eig_db):
 		model,
 		loader,
 		criterion,
-		num_eigenthings=3,
+		num_eigenthings=1, # only need the largest eigenvalue
 		power_iter_steps=18,
 		power_iter_err_threshold=1e-5,
 		momentum=0,

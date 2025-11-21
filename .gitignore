@@ -300,7 +300,5 @@ models/
 data/
 tmp/
 temp/
-outputs/
-output/
 # End of https://www.gitignore.io/api/vim,macos,python,sublimetext,pycharm+all
 

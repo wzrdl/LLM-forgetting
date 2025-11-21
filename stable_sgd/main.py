@@ -136,20 +136,21 @@ def run(args):
 
 			# 2. evaluate on all tasks up to now, including the current task
 			for prev_task_id in range(1, current_task_id+1):
-				# 2.0. only evaluate once a task is finished
+				model = model.to(DEVICE)
+				val_loader = tasks[prev_task_id]['test']
+				
+				# 2.1. compute accuracy and loss (now at every epoch)
+				metrics = eval_single_epoch(model, val_loader, criterion, prev_task_id)
+				acc_db, loss_db = log_metrics(metrics, time, prev_task_id, acc_db, loss_db)
+				
+				# 2.2. (optional) compute eigenvalues and eigenvectors of Loss Hessian
+				if (prev_task_id == current_task_id
+					and args.compute_eigenspectrum
+					and epoch == args.epochs_per_task):
+					hessian_eig_db = log_hessian(model, val_loader, time, prev_task_id, hessian_eig_db)
+					
+				# 2.3. save model parameters only at the end of each task
 				if epoch == args.epochs_per_task:
-					model = model.to(DEVICE)
-					val_loader = tasks[prev_task_id]['test']
-					
-					# 2.1. compute accuracy and loss
-					metrics = eval_single_epoch(model, val_loader, criterion, prev_task_id)
-					acc_db, loss_db = log_metrics(metrics, time, prev_task_id, acc_db, loss_db)
-					
-					# 2.2. (optional) compute eigenvalues and eigenvectors of Loss Hessian
-					if prev_task_id == current_task_id and args.compute_eigenspectrum:
-						hessian_eig_db = log_hessian(model, val_loader, time, prev_task_id, hessian_eig_db)
-						
-					# 2.3. save model parameters
 					save_checkpoint(model, time)
 
 	end_experiment(args, acc_db, loss_db, hessian_eig_db)
