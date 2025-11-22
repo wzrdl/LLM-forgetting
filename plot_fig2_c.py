@@ -12,9 +12,9 @@ from analyze_fig2_point import (
 
 
 def main(
-    runs_csv: str = "fig2_cd_runs.csv",
-    out_png: str = "fig2c_from_runs.png",
-    y_metric: str = "acc",  # "acc" (original) or "loss" (loss-based forgetting)
+    runs_csv: str = "fig2_cd_runs_perm-mnist.csv",
+    out_png: str = "fig2c_from_runs_perm-mnist_loss.png",
+    y_metric: str = "loss",  # "acc" (original) or "loss" (loss-based forgetting)
 ):
     """
     Aggregate all runs recorded in `fig2_cd_runs.csv` and draw a Fig.2(c)-style scatter plot:

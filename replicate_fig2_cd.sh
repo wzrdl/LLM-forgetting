@@ -6,7 +6,7 @@ cd "$(dirname "$0")"
 
 # ----------------------------- base setup -----------------------------------
 
-DATASET="rot-mnist"      # you can change to perm-mnist if desired
+DATASET="perm-mnist"      # you can change to perm-mnist if desired
 TASKS=2                  # as requested: 2-task setup
 EPOCHS_PER_TASK=3        # 3 epochs per task, like the short cd experiments
 HIDDENS=100              # same scale as Experiment 1 MLP
@@ -21,7 +21,7 @@ DROPOUT_LIST=(0.0 0.5)
 SEEDS=(7891 1145 9723)
 
 # Where to record mapping from hyperparameters to outputs directory
-RESULTS_CSV="fig2_cd_runs.csv"
+RESULTS_CSV="fig2_cd_runs_perm-mnist.csv"
 
 if [[ ! -f "${RESULTS_CSV}" ]]; then
   echo "dataset,tasks,epochs_per_task,lr,gamma,batch_size,dropout,hiddens,seed,experiment_dir" > "${RESULTS_CSV}"
