@@ -137,9 +137,16 @@ def select_latest_block(runs: list[RunStats], block_size: int = 6) -> list[RunSt
 def map_runs_to_table(selected: list[RunStats]) -> dict[str, dict[str, RunStats]]:
     """
     Heuristic mapping for 6 latest runs:
-    - 4 MLP runs -> permuted/rotated pairs (split by diagonal current-task accuracy).
-    - 2 ResNet runs -> split CIFAR100 pair.
-    - In each pair, 'stable' is selected by lower forgetting (MLP) or higher accuracy (ResNet).
+    - 4 MLP runs correspond to {perm, rot} x {naive, stable}
+    - 2 ResNet runs correspond to split CIFAR100 {naive, stable}
+
+    MLP mapping:
+    1) Split by forgetting: two lowest forgetting runs -> stable group,
+       two highest forgetting runs -> naive group.
+    2) Inside each group, higher final accuracy -> permuted, lower -> rotated.
+
+    CIFAR mapping:
+    - Higher final accuracy -> stable, lower -> naive.
     """
     mlp = [r for r in selected if r.arch == "mlp"]
     res = [r for r in selected if r.arch == "resnet"]
@@ -150,16 +157,14 @@ def map_runs_to_table(selected: list[RunStats]) -> dict[str, dict[str, RunStats]
             f"Got {len(mlp)} MLP and {len(res)} ResNet."
         )
 
-    mlp_sorted = sorted(mlp, key=lambda r: (r.diag_mean if r.diag_mean is not None else -1.0))
-    rotated_pair = mlp_sorted[:2]   # lower diagonal current-task accuracy
-    perm_pair = mlp_sorted[2:]      # higher diagonal current-task accuracy
+    mlp_by_forget = sorted(mlp, key=lambda r: r.forget)
+    stable_group = mlp_by_forget[:2]
+    naive_group = mlp_by_forget[2:]
 
-    # Stable vs Naive assignment inside each pair.
-    # For MLP, use lower forgetting as "stable".
-    rot_stable = min(rotated_pair, key=lambda r: r.forget)
-    rot_naive = max(rotated_pair, key=lambda r: r.forget)
-    perm_stable = min(perm_pair, key=lambda r: r.forget)
-    perm_naive = max(perm_pair, key=lambda r: r.forget)
+    perm_stable = max(stable_group, key=lambda r: r.avg_acc)
+    rot_stable = min(stable_group, key=lambda r: r.avg_acc)
+    perm_naive = min(naive_group, key=lambda r: r.avg_acc)
+    rot_naive = max(naive_group, key=lambda r: r.avg_acc)
 
     # For CIFAR runs, choose higher-accuracy run as "stable".
     cifar_stable = max(res, key=lambda r: r.avg_acc)

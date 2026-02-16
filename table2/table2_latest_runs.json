@@ -1,34 +1,73 @@
 {
   "selected_runs_latest_6": [
     {
-      "run_id": "6C4995",
-      "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\6C4995",
+      "run_id": "0A529D",
+      "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\0A529D",
+      "arch": "resnet",
+      "tasks": 20,
+      "rows": 20,
+      "avg_acc": 41.05,
+      "forget": 0.26873684210526316,
+      "diag_mean": 66.58,
+      "diag_min": 49.6,
+      "diag_max": 77.4,
+      "mtime": 1771249962.521434
+    },
+    {
+      "run_id": "1B847E",
+      "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\1B847E",
       "arch": "mlp",
       "tasks": 20,
       "rows": 20,
-      "avg_acc": 39.834500000000006,
-      "forget": 0.3606578947368421,
-      "diag_mean": 71.9215,
-      "diag_min": 52.67,
-      "diag_max": 92.1,
-      "mtime": 1771223806.0471554
+      "avg_acc": 68.19249999999998,
+      "forget": 0.1716526315789473,
+      "diag_mean": 80.97749999999999,
+      "diag_min": 55.81,
+      "diag_max": 97.4,
+      "mtime": 1771249962.692984
     },
     {
-      "run_id": "7CF79A",
-      "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\7CF79A",
+      "run_id": "46C927",
+      "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\46C927",
       "arch": "mlp",
       "tasks": 20,
       "rows": 20,
-      "avg_acc": 38.9595,
-      "forget": 0.6025052631578948,
-      "diag_mean": 96.1975,
-      "diag_min": 95.43,
-      "diag_max": 96.74,
-      "mtime": 1771223806.208741
+      "avg_acc": 41.0705,
+      "forget": 0.5802526315789472,
+      "diag_mean": 96.19449999999999,
+      "diag_min": 95.08,
+      "diag_max": 97.19,
+      "mtime": 1771249962.8626606
     },
     {
-      "run_id": "8F39CC",
-      "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\8F39CC",
+      "run_id": "4805DF",
+      "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\4805DF",
+      "arch": "mlp",
+      "tasks": 20,
+      "rows": 20,
+      "avg_acc": 81.2825,
+      "forget": 0.13426842105263156,
+      "diag_mean": 94.038,
+      "diag_min": 89.14,
+      "diag_max": 95.97,
+      "mtime": 1771249963.03022
+    },
+    {
+      "run_id": "A6FF11",
+      "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\A6FF11",
+      "arch": "resnet",
+      "tasks": 20,
+      "rows": 20,
+      "avg_acc": 49.660000000000004,
+      "forget": 0.10368421052631578,
+      "diag_mean": 59.09000000000001,
+      "diag_min": 40.8,
+      "diag_max": 75.0,
+      "mtime": 1771249963.675167
+    },
+    {
+      "run_id": "D6F78E",
+      "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\D6F78E",
       "arch": "mlp",
       "tasks": 20,
       "rows": 20,
@@ -37,94 +76,27 @@
       "diag_mean": 97.4645,
       "diag_min": 95.43,
       "diag_max": 97.91,
-      "mtime": 1771223806.3666441
-    },
-    {
-      "run_id": "D5ECF4",
-      "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\D5ECF4",
-      "arch": "resnet",
-      "tasks": 20,
-      "rows": 20,
-      "avg_acc": 20.009999999999998,
-      "forget": 0.010105263157894742,
-      "diag_mean": 20.119999999999997,
-      "diag_min": 19.0,
-      "diag_max": 22.2,
-      "mtime": 1771223806.8686981
-    },
-    {
-      "run_id": "E065A4",
-      "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\E065A4",
-      "arch": "resnet",
-      "tasks": 20,
-      "rows": 20,
-      "avg_acc": 48.19000000000001,
-      "forget": 0.20926315789473687,
-      "diag_mean": 67.84,
-      "diag_min": 46.4,
-      "diag_max": 77.0,
-      "mtime": 1771223807.2881458
-    },
-    {
-      "run_id": "FA4AE7",
-      "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\FA4AE7",
-      "arch": "mlp",
-      "tasks": 20,
-      "rows": 20,
-      "avg_acc": 33.5355,
-      "forget": 0.22406842105263156,
-      "diag_mean": 54.7275,
-      "diag_min": 36.63,
-      "diag_max": 68.12,
-      "mtime": 1771223807.425421
+      "mtime": 1771249963.8623502
     }
   ],
   "mapping": {
     "naive": {
       "perm": {
-        "run_id": "7CF79A",
-        "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\7CF79A",
+        "run_id": "46C927",
+        "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\46C927",
         "arch": "mlp",
         "tasks": 20,
         "rows": 20,
-        "avg_acc": 38.9595,
-        "forget": 0.6025052631578948,
-        "diag_mean": 96.1975,
-        "diag_min": 95.43,
-        "diag_max": 96.74,
-        "mtime": 1771223806.208741
+        "avg_acc": 41.0705,
+        "forget": 0.5802526315789472,
+        "diag_mean": 96.19449999999999,
+        "diag_min": 95.08,
+        "diag_max": 97.19,
+        "mtime": 1771249962.8626606
       },
       "rot": {
-        "run_id": "6C4995",
-        "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\6C4995",
-        "arch": "mlp",
-        "tasks": 20,
-        "rows": 20,
-        "avg_acc": 39.834500000000006,
-        "forget": 0.3606578947368421,
-        "diag_mean": 71.9215,
-        "diag_min": 52.67,
-        "diag_max": 92.1,
-        "mtime": 1771223806.0471554
-      },
-      "cifar": {
-        "run_id": "D5ECF4",
-        "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\D5ECF4",
-        "arch": "resnet",
-        "tasks": 20,
-        "rows": 20,
-        "avg_acc": 20.009999999999998,
-        "forget": 0.010105263157894742,
-        "diag_mean": 20.119999999999997,
-        "diag_min": 19.0,
-        "diag_max": 22.2,
-        "mtime": 1771223806.8686981
-      }
-    },
-    "stable": {
-      "perm": {
-        "run_id": "8F39CC",
-        "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\8F39CC",
+        "run_id": "D6F78E",
+        "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\D6F78E",
         "arch": "mlp",
         "tasks": 20,
         "rows": 20,
@@ -133,33 +105,61 @@
         "diag_mean": 97.4645,
         "diag_min": 95.43,
         "diag_max": 97.91,
-        "mtime": 1771223806.3666441
-      },
-      "rot": {
-        "run_id": "FA4AE7",
-        "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\FA4AE7",
-        "arch": "mlp",
-        "tasks": 20,
-        "rows": 20,
-        "avg_acc": 33.5355,
-        "forget": 0.22406842105263156,
-        "diag_mean": 54.7275,
-        "diag_min": 36.63,
-        "diag_max": 68.12,
-        "mtime": 1771223807.425421
+        "mtime": 1771249963.8623502
       },
       "cifar": {
-        "run_id": "E065A4",
-        "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\E065A4",
+        "run_id": "0A529D",
+        "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\0A529D",
         "arch": "resnet",
         "tasks": 20,
         "rows": 20,
-        "avg_acc": 48.19000000000001,
-        "forget": 0.20926315789473687,
-        "diag_mean": 67.84,
-        "diag_min": 46.4,
-        "diag_max": 77.0,
-        "mtime": 1771223807.2881458
+        "avg_acc": 41.05,
+        "forget": 0.26873684210526316,
+        "diag_mean": 66.58,
+        "diag_min": 49.6,
+        "diag_max": 77.4,
+        "mtime": 1771249962.521434
+      }
+    },
+    "stable": {
+      "perm": {
+        "run_id": "4805DF",
+        "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\4805DF",
+        "arch": "mlp",
+        "tasks": 20,
+        "rows": 20,
+        "avg_acc": 81.2825,
+        "forget": 0.13426842105263156,
+        "diag_mean": 94.038,
+        "diag_min": 89.14,
+        "diag_max": 95.97,
+        "mtime": 1771249963.03022
+      },
+      "rot": {
+        "run_id": "1B847E",
+        "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\1B847E",
+        "arch": "mlp",
+        "tasks": 20,
+        "rows": 20,
+        "avg_acc": 68.19249999999998,
+        "forget": 0.1716526315789473,
+        "diag_mean": 80.97749999999999,
+        "diag_min": 55.81,
+        "diag_max": 97.4,
+        "mtime": 1771249962.692984
+      },
+      "cifar": {
+        "run_id": "A6FF11",
+        "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\A6FF11",
+        "arch": "resnet",
+        "tasks": 20,
+        "rows": 20,
+        "avg_acc": 49.660000000000004,
+        "forget": 0.10368421052631578,
+        "diag_mean": 59.09000000000001,
+        "diag_min": 40.8,
+        "diag_max": 75.0,
+        "mtime": 1771249963.675167
       }
     }
   },
