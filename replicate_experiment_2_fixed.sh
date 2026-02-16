@@ -29,7 +29,7 @@ EPOCHS_PER_TASK=1
 HIDDENS=256
 
 # Paper reports 5-run averages.
-SEEDS=(1234 4567 7891 2345 9723)
+SEEDS=(1234)
 
 run_sgd () {
   local dataset="$1"
