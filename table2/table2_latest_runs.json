@@ -1,0 +1,170 @@
+{
+  "selected_runs_latest_6": [
+    {
+      "run_id": "6C4995",
+      "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\6C4995",
+      "arch": "mlp",
+      "tasks": 20,
+      "rows": 20,
+      "avg_acc": 39.834500000000006,
+      "forget": 0.3606578947368421,
+      "diag_mean": 71.9215,
+      "diag_min": 52.67,
+      "diag_max": 92.1,
+      "mtime": 1771223806.0471554
+    },
+    {
+      "run_id": "7CF79A",
+      "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\7CF79A",
+      "arch": "mlp",
+      "tasks": 20,
+      "rows": 20,
+      "avg_acc": 38.9595,
+      "forget": 0.6025052631578948,
+      "diag_mean": 96.1975,
+      "diag_min": 95.43,
+      "diag_max": 96.74,
+      "mtime": 1771223806.208741
+    },
+    {
+      "run_id": "8F39CC",
+      "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\8F39CC",
+      "arch": "mlp",
+      "tasks": 20,
+      "rows": 20,
+      "avg_acc": 46.677,
+      "forget": 0.5353894736842105,
+      "diag_mean": 97.4645,
+      "diag_min": 95.43,
+      "diag_max": 97.91,
+      "mtime": 1771223806.3666441
+    },
+    {
+      "run_id": "D5ECF4",
+      "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\D5ECF4",
+      "arch": "resnet",
+      "tasks": 20,
+      "rows": 20,
+      "avg_acc": 20.009999999999998,
+      "forget": 0.010105263157894742,
+      "diag_mean": 20.119999999999997,
+      "diag_min": 19.0,
+      "diag_max": 22.2,
+      "mtime": 1771223806.8686981
+    },
+    {
+      "run_id": "E065A4",
+      "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\E065A4",
+      "arch": "resnet",
+      "tasks": 20,
+      "rows": 20,
+      "avg_acc": 48.19000000000001,
+      "forget": 0.20926315789473687,
+      "diag_mean": 67.84,
+      "diag_min": 46.4,
+      "diag_max": 77.0,
+      "mtime": 1771223807.2881458
+    },
+    {
+      "run_id": "FA4AE7",
+      "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\FA4AE7",
+      "arch": "mlp",
+      "tasks": 20,
+      "rows": 20,
+      "avg_acc": 33.5355,
+      "forget": 0.22406842105263156,
+      "diag_mean": 54.7275,
+      "diag_min": 36.63,
+      "diag_max": 68.12,
+      "mtime": 1771223807.425421
+    }
+  ],
+  "mapping": {
+    "naive": {
+      "perm": {
+        "run_id": "7CF79A",
+        "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\7CF79A",
+        "arch": "mlp",
+        "tasks": 20,
+        "rows": 20,
+        "avg_acc": 38.9595,
+        "forget": 0.6025052631578948,
+        "diag_mean": 96.1975,
+        "diag_min": 95.43,
+        "diag_max": 96.74,
+        "mtime": 1771223806.208741
+      },
+      "rot": {
+        "run_id": "6C4995",
+        "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\6C4995",
+        "arch": "mlp",
+        "tasks": 20,
+        "rows": 20,
+        "avg_acc": 39.834500000000006,
+        "forget": 0.3606578947368421,
+        "diag_mean": 71.9215,
+        "diag_min": 52.67,
+        "diag_max": 92.1,
+        "mtime": 1771223806.0471554
+      },
+      "cifar": {
+        "run_id": "D5ECF4",
+        "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\D5ECF4",
+        "arch": "resnet",
+        "tasks": 20,
+        "rows": 20,
+        "avg_acc": 20.009999999999998,
+        "forget": 0.010105263157894742,
+        "diag_mean": 20.119999999999997,
+        "diag_min": 19.0,
+        "diag_max": 22.2,
+        "mtime": 1771223806.8686981
+      }
+    },
+    "stable": {
+      "perm": {
+        "run_id": "8F39CC",
+        "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\8F39CC",
+        "arch": "mlp",
+        "tasks": 20,
+        "rows": 20,
+        "avg_acc": 46.677,
+        "forget": 0.5353894736842105,
+        "diag_mean": 97.4645,
+        "diag_min": 95.43,
+        "diag_max": 97.91,
+        "mtime": 1771223806.3666441
+      },
+      "rot": {
+        "run_id": "FA4AE7",
+        "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\FA4AE7",
+        "arch": "mlp",
+        "tasks": 20,
+        "rows": 20,
+        "avg_acc": 33.5355,
+        "forget": 0.22406842105263156,
+        "diag_mean": 54.7275,
+        "diag_min": 36.63,
+        "diag_max": 68.12,
+        "mtime": 1771223807.425421
+      },
+      "cifar": {
+        "run_id": "E065A4",
+        "path": "C:\\Users\\24717\\Desktop\\LLM Forgetting\\stable-continual-learning\\outputs\\E065A4",
+        "arch": "resnet",
+        "tasks": 20,
+        "rows": 20,
+        "avg_acc": 48.19000000000001,
+        "forget": 0.20926315789473687,
+        "diag_mean": 67.84,
+        "diag_min": 46.4,
+        "diag_max": 77.0,
+        "mtime": 1771223807.2881458
+      }
+    }
+  },
+  "notes": [
+    "EWC/A-GEM/ER rows are N/A because no corresponding result files were found locally.",
+    "Mapping uses heuristics from run architecture and trajectory statistics; verify if run IDs are known."
+  ]
+}

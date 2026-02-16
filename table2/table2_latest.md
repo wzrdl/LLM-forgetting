@@ -1,0 +1,10 @@
+Table 2 (latest local runs): Comparison of average accuracy and forgetting on three datasets.
+
+| Method | Memoryless | Permuted MNIST Accuracy | Permuted MNIST Forgetting | Rotated MNIST Accuracy | Rotated MNIST Forgetting | Split CIFAR100 Accuracy | Split CIFAR100 Forgetting |
+|---|---|---|---|---|---|---|---|
+| Naive SGD | Yes | 39.0 | 0.60 | 39.8 | 0.36 | 20.0 | 0.01 |
+| EWC | Yes | N/A | N/A | N/A | N/A | N/A | N/A |
+| A-GEM | No | N/A | N/A | N/A | N/A | N/A | N/A |
+| ER-Reservoir | No | N/A | N/A | N/A | N/A | N/A | N/A |
+| Stable SGD | Yes | 46.7 | 0.54 | 33.5 | 0.22 | 48.2 | 0.21 |
+| Multi-Task Learning | N/A | N/A | 0.00 | N/A | 0.00 | N/A | 0.00 |

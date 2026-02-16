@@ -126,7 +126,8 @@ def run(args):
 	for current_task_id in range(1, args.tasks+1):
 		print("================== TASK {} / {} =================".format(current_task_id, args.tasks))
 		train_loader = tasks[current_task_id]['train']
-		lr = max(args.lr * args.gamma ** (current_task_id), 0.00005)
+		# Apply decay after finishing each task (task 1 uses the initial lr).
+		lr = max(args.lr * args.gamma ** (current_task_id - 1), 0.00005)
 		
 		for epoch in range(1, args.epochs_per_task+1):
 			# 1. train and save

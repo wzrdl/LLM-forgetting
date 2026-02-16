@@ -62,9 +62,11 @@ class BasicBlock(nn.Module):
 		out = relu(out)
 		out = self.IC1(out)
 
+		out = self.conv2(out)
+		out = self.IC2(out)
+
 		out += self.shortcut(x)
 		out = relu(out)
-		out = self.IC2(out)
 		return out
 
 
