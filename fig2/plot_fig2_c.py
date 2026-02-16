@@ -3,17 +3,28 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from analyze_fig2_point import (
-    compute_F1,
-    compute_F1_loss,
-    compute_delta_w_sq,
-    load_lambda_max_task1,
-)
+try:
+    from .analyze_fig2_point import (
+        compute_F1,
+        compute_F1_loss,
+        compute_delta_w_sq,
+        load_lambda_max_task1,
+    )
+except ImportError:
+    from analyze_fig2_point import (
+        compute_F1,
+        compute_F1_loss,
+        compute_delta_w_sq,
+        load_lambda_max_task1,
+    )
+
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 def main(
-    runs_csv: str = "fig2_cd_runs.csv",
-    out_png: str = "fig2c_from_runs.png",
+    runs_csv: str = os.path.join(SCRIPT_DIR, "fig2_cd_runs.csv"),
+    out_png: str = os.path.join(SCRIPT_DIR, "fig2c_from_runs.png"),
     y_metric: str = "acc",  # "acc" (original) or "loss" (loss-based forgetting)
 ):
     """

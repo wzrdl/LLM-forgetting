@@ -147,7 +147,14 @@ def run(args):
 				if (prev_task_id == current_task_id
 					and args.compute_eigenspectrum
 					and epoch == args.epochs_per_task):
-					hessian_eig_db = log_hessian(model, val_loader, time, prev_task_id, hessian_eig_db)
+					hessian_eig_db = log_hessian(
+						model,
+						val_loader,
+						time,
+						prev_task_id,
+						hessian_eig_db,
+						num_eigenthings=args.num_eigenthings,
+					)
 					
 				# 2.3. save model parameters only at the end of each task
 				if epoch == args.epochs_per_task:

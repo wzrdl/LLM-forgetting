@@ -1,0 +1,1 @@
+dataset,tasks,epochs_per_task,lr,gamma,batch_size,dropout,hiddens,seed,experiment_dir

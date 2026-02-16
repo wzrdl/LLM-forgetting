@@ -2,11 +2,13 @@
 
 
 set -euo pipefail
-cd "$(dirname "$0")"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+cd "${REPO_ROOT}"
 
 # ----------------------------- base setup -----------------------------------
 
-DATASET="rot-mnist"      # you can change to perm-mnist if desired
+DATASET="perm-mnist"      # you can change to perm-mnist if desired
 TASKS=2                  # as requested: 2-task setup
 EPOCHS_PER_TASK=3        # 3 epochs per task, like the short cd experiments
 HIDDENS=100              # same scale as Experiment 1 MLP
@@ -21,7 +23,7 @@ DROPOUT_LIST=(0.0 0.5)
 SEEDS=(7891 1145 9723)
 
 # Where to record mapping from hyperparameters to outputs directory
-RESULTS_CSV="fig2_cd_runs.csv"
+RESULTS_CSV="${SCRIPT_DIR}/fig2_cd_runs_perm-mnist.csv"
 
 if [[ ! -f "${RESULTS_CSV}" ]]; then
   echo "dataset,tasks,epochs_per_task,lr,gamma,batch_size,dropout,hiddens,seed,experiment_dir" > "${RESULTS_CSV}"
@@ -67,7 +69,7 @@ for SEED in "${SEEDS[@]}"; do
           # corresponds to this experiment (TRIAL_ID in stable_sgd.utils).
           # We reuse analyze_fig2_point.find_latest_experiment_dir to resolve it.
           EXP_DIR=$(python - << 'EOF'
-from analyze_fig2_point import find_latest_experiment_dir
+from fig2.analyze_fig2_point import find_latest_experiment_dir
 print(find_latest_experiment_dir("outputs"))
 EOF
 )
@@ -85,5 +87,4 @@ done
 
 echo ""
 echo "All runs finished. Hyperparameter-to-output mapping saved in ${RESULTS_CSV}."
-
 

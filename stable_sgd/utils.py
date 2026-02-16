@@ -27,9 +27,13 @@ def parse_arguments():
 	parser.add_argument('--dropout', default=0.25, type=float, help='dropout probability. Use 0.0 for no dropout')
 	parser.add_argument('--hiddens', default=256, type=int, help='num of hidden neurons in each layer of a 2-layer MLP')
 	parser.add_argument('--compute-eigenspectrum', action='store_true', help='compute eigenvalues/eigenvectors?')
+	parser.add_argument('--num-eigenthings', default=1, type=int,
+						help='number of top Hessian eigenvalues/eigenvectors to compute')
 	parser.add_argument('--seed', default=1234, type=int, help='random seed')
 
 	args = parser.parse_args()
+	if args.num_eigenthings < 1:
+		parser.error('--num-eigenthings must be >= 1')
 	return args
 
 
@@ -97,7 +101,7 @@ def save_eigenvec(filename, arr):
 	np.save(filename, arr)
 
 
-def log_hessian(model, loader, time, task_id, hessian_eig_db):
+def log_hessian(model, loader, time, task_id, hessian_eig_db, num_eigenthings=1):
 	"""
 	Compute and log Hessian for a specific task
 	
@@ -116,7 +120,7 @@ def log_hessian(model, loader, time, task_id, hessian_eig_db):
 		model,
 		loader,
 		criterion,
-		num_eigenthings=1, # only need the largest eigenvalue
+		num_eigenthings=num_eigenthings,
 		power_iter_steps=18,
 		power_iter_err_threshold=1e-5,
 		momentum=0,
